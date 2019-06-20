@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-12 col-md-5 offset-md-4">
+        <div class="card">
+            <div class="card-header">
+                Register Here
+            </div>
+            <div class="card-body">
+                <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                    <div class="alert alert-danger" [hidden]="!successmessage">
+                        {{ successmessage }}
+                    </div>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="name" placeholder="Your Name">
+                            <div class="alert alert-danger" [hidden]="!error.name">
+                                {{ error.name }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" formControlName="email"
+                                   placeholder="example@email.com">
+                            <div class="alert alert-danger" [hidden]="!error.email">
+                                {{ error.email }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-3 col-form-label">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" formControlName="password" placeholder="password"
+                                   class="form-control">
+                            <div class="alert alert-danger" [hidden]="!error.password">
+                                {{ error.password }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password_confirmation" class="col-sm-3 col-form-label">Confirm Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" formControlName="password_confirmation"
+                                   placeholder="confirm password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-md btn-primary" [disabled]="!signUpForm.valid"> Sign
+                                Up
+                            </button>
+                            <a routerLink="/auth/login" class="btn btn-md btn-primary float-right"> Log In </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

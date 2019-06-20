@@ -1,0 +1,56 @@
+.navbar{
+  background-color: #3f51b5;
+  padding: 1%;
+}
+
+::ng-deep .mat-form-field
+  .mat-input-element {
+      color: #fff;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-label {
+      color: #ff884d;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-underline {
+      color: #ff884d;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-ripple {
+      color: #ff884d;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-required-marker {
+      color: #ff884d;
+
+  }
+
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ff884d;
+}
+
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-ripple {
+  color: #ff884d;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-form-field-required-marker {
+      color: #ff884d;
+      background-color: #ff884d;
+
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label .mat-input-element {
+      color: #ff884d;
+      background-color: #ff884d;
+
+  }
+
+  md-input-container label {
+    color: #fff !important;
+  }
+
+  /* When the input is focused */
+  md-input-container.md-input-focused label {
+    color: #fff !important;
+  }

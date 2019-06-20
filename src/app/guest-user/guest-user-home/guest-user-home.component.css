@@ -1,0 +1,15 @@
+.carousel[_ngcontent-lmo-c3] {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  height: 220% !important;
+}
+
+.slider {
+  height: 220% !important;
+}
+
+.title{
+  background-color: #3f51b5;
+}
