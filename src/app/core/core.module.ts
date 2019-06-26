@@ -19,7 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class CoreModule {
 
-    ngOninit(){
+    ngOninit() {
         console.log('core-loading');
     }
 }

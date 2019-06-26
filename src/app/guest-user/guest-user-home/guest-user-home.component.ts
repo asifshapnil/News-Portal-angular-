@@ -20,7 +20,7 @@ export class GuestUserHomeComponent implements OnInit {
 
   getLatestPostForCover() {
       this.service.getLatestPostForCover().subscribe(res => {
-          this.posts = res.data
+          this.posts = res.data;
       });
   }
 

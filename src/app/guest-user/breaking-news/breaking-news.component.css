@@ -1,0 +1,19 @@
+.heading{
+    border-bottom: 1px solid #000000;
+}
+.heading h4{
+    background-color: #000000;
+    font-size: 16px;
+    color: #fff;
+    padding: 13px;
+    margin-bottom: 0px;
+    width: 173px;
+}
+
+a {
+    color: #566 !important;
+  }
+a:hover {
+    color: #566 !important;
+    text-decoration: none;
+  }

@@ -1,4 +1,4 @@
-import { PostServiceService } from './../services/post-service.service';
+import { PostServiceService } from '../services/post-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
 
   getPost() {
     this.service.getPost(this.id).subscribe(res => {
-      this.post = res.data
+      this.post = res.data;
   });
   }
 
