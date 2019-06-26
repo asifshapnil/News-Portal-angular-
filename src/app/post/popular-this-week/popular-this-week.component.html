@@ -8,6 +8,8 @@
         <div>
             <img class="img-fluid" [src]="post.imagePath" alt="">
         </div>
+        <h6> Posted By <span class="text-info">{{ post.author|uppercase }}</span> </h6>
+            <h6 >  <span class="text-warning">{{ post.created_at.date|date }}</span> </h6>
         <div>
             <h5 class="text-muted mt-3"><a [routerLink]="['/post', post.id]">{{ post.heading }}</a></h5>
         </div>

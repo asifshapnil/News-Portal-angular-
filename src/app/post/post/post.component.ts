@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostServiceService } from 'src/app/guest-user/services/post-service.service';
 
@@ -10,6 +10,8 @@ import { PostServiceService } from 'src/app/guest-user/services/post-service.ser
 export class PostComponent implements OnInit {
   public id: string;
   public post;
+  @ViewChild('videoPlayer', {static: true}) videoplayer: ElementRef;
+
   constructor(private router: Router, private route: ActivatedRoute, private service: PostServiceService ) {
     // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.route.params.subscribe(params => {
@@ -28,7 +30,11 @@ export class PostComponent implements OnInit {
   getPost() {
     this.service.getPost(this.id).subscribe(res => {
       this.post = res.data;
-  });
+    });
+  }
+
+  toggleVideo(event: any) {
+    this.videoplayer.nativeElement.play();
   }
 
 }

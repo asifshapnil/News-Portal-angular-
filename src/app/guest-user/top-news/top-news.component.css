@@ -1,0 +1,17 @@
+h6{
+  font-size: 12px;
+}
+
+a {
+  color: #566 !important;
+}
+a:hover {
+  color: #566 !important;
+  text-decoration: none;
+}
+
+img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}

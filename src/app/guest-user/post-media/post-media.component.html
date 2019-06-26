@@ -6,13 +6,15 @@
     </div>
 </div>
 <div class="row mt-3">
-    <div class="col-md-12" *ngFor="let post of posts">
+    <div class="col-md-12 mb-3" *ngFor="let post of posts">
         <video class="img-fluid" controls (click)="toggleVideo()" #videoPlayer>
             <source [src]="post.imagePath" type="video/mp4" />
             Browser not supported
         </video>
+        <h6> Posted By <span class="text-info">{{ post.author }}</span> </h6>
+            <h6 >  <span class="text-warning">{{ post.created_at.date|date }}</span> </h6>
         <div>
-            <h4>{{ post.heading }}</h4>
+            <h4><a [routerLink]="['/post', post.id]">{{ post.heading }}</a></h4>
         </div>
     </div>
 </div>

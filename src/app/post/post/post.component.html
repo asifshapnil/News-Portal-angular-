@@ -1,6 +1,19 @@
   <div>
-      <h5 class="text-info">{{ post.category }} </h5>
-      <h1>{{ post.heading }}</h1>
-      <img class="img-fluid" [src]="post.imagePath" alt="">
+      <h1>{{ post.heading }} </h1>
+      <h5 class="text-white text-center category-name">{{ post.category }} </h5>
+
+      <h6> Posted By <span class="text-info">{{ post.author|uppercase }}</span>
+          <span class="text-warning">
+              <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+              {{ post.created_at.date|date }}
+          </span>
+          <span class="text-success pl-3">Total read {{ post.count }} times</span>
+      </h6>
+       <br>
+      <img *ngIf="post.isMedia === 0" class="img-fluid" [src]="post.imagePath" alt="">
+      <video *ngIf="post.isMedia === 1" class="img-fluid" controls (click)="toggleVideo()" #videoPlayer>
+          <source [src]="post.imagePath" type="video/mp4" />
+          Browser not supported
+      </video>
       <p class="text-muted mt-4">{{ post.body }}</p>
 </div>

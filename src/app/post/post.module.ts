@@ -1,3 +1,4 @@
+import { UiComponents } from './../ui-components';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostDetailsComponent } from './post-details/post-details.component';
@@ -9,13 +10,13 @@ import { PopularThisWeekComponent } from './popular-this-week/popular-this-week.
   declarations: [PostDetailsComponent, PostComponent, PopularThisWeekComponent],
   imports: [
     CommonModule,
-    PostRoutingModule
+    PostRoutingModule,
+    UiComponents
   ]
 })
-export class PostModule { 
+export class PostModule {
   constructor() {
   }
 }
 
 
- 
