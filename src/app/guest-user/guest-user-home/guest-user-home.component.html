@@ -1,23 +1,32 @@
 
-              <div class="row">
-                  <div class="col p-0"   *ngFor="let post of posts">
-                       <!---<h4 class="text-white"> {{ post.categoryName }} </h4>-->
-                      <!-- <div class="card" *ngFor= "let latestPost of post.posts" [ngStyle]="{ 'background-image': 'url(' + latestPost.imagePath + ')', 'background-size':'cover', 'background-repeat':'no-repeat'}">-->
-                      <div class="card" *ngFor= "let latestPost of post.posts" style="">
-                          <img class="card-img-top" [src]="latestPost.imagePath" alt="Card image">
-                        <div class="dark-overlay card-img-overlay">
+<div class="row">
+  <div class="col p-0"   *ngFor="let post of posts">
+        <!---<h4 class="text-white"> {{ post.categoryName }} </h4>-->
+      <!-- <div class="card" *ngFor= "let latestPost of post.posts" [ngStyle]="{ 'background-image': 'url(' + latestPost.imagePath + ')', 'background-size':'cover', 'background-repeat':'no-repeat'}">-->
+      <div class="card p-0" *ngFor= "let latestPost of post.posts" style="">
+          <img class="card-img-top" [src]="latestPost.imagePath" alt="Card image">
+        <div class="dark-overlay card-img-overlay">
 
-                            <button type="button" class="content-heading btn btn-sm btn-warning text-white">
-                              {{ latestPost.category }}
-                            </button>
-                            <p class="mt-3">
-                                <a class="card-title" [routerLink]="['/post', latestPost.id]">{{ latestPost.heading }} </a>
-                            </p>
-                            <div class="post-content text-white"> {{ latestPost.body.slice(0,150) }} </div>
-                        </div>
+            <button type="button" class="content-heading btn btn-sm btn-warning text-white">
+              {{ latestPost.category }}
+            </button>
+            <p class="mt-3">
+                <a class="card-title" [routerLink]="['/post', latestPost.id]">{{ latestPost.heading }} </a>
+            </p>
+            <div class="post-content text-white"> {{ latestPost.body.slice(0,150) }} </div>
+        </div>
 
-                    </div>
-                  </div>
-                </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+      <div class="col-md-8 p-0">
+            <app-breaking-news> </app-breaking-news>
+      </div>
+      <div class="col-md-4">
+            <app-post-media> </app-post-media>
+      </div>
+</div>
 
 

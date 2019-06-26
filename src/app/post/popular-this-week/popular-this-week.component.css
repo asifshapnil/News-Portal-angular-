@@ -1,0 +1,21 @@
+
+
+.heading{
+    border-bottom: 1px solid #000000;
+}
+.heading h5{
+    background-color: #000000;
+    font-size: 13px;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 0px;
+    width: 173px;
+}
+
+a {
+    color: #566 !important;
+  }
+a:hover {
+    color: #566 !important;
+    text-decoration: none;
+  }

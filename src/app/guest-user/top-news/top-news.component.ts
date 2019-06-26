@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PopularThisMonthService } from '../services/popular-this-month.service';
 
 @Component({
   selector: 'app-top-news',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNewsComponent implements OnInit {
 
-  constructor() { }
+  public posts;
+  constructor(private service: PopularThisMonthService) { }
 
   ngOnInit() {
+    this.getPost();
+  }
+
+  getPost() {
+      this.service.getPopularThisMonth().subscribe(res => {
+          this.posts = res.data;
+      });
   }
 
 }

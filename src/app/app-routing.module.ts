@@ -2,7 +2,7 @@ import { GuestUserHomeComponent } from './guest-user/guest-user-home/guest-user-
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
-import { PostComponent } from './guest-user/post/post.component';
+// import { PostComponent } from './guest-user/post-details/post.component';
 
 const routes: Routes = [
     {
@@ -10,8 +10,8 @@ const routes: Routes = [
       component: GuestUserHomeComponent
     },
     {
-      path: 'post/:id',
-      component: PostComponent
+      path: 'post',
+      loadChildren: '../app/post/post.module#PostModule'
     },
     {
       path: 'admin',

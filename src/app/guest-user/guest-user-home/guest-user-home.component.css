@@ -19,7 +19,7 @@
 }
 
 .dark-overlay {
-  background-color: rgba(61, 46, 46, 0.7);
+  /* background-color: rgba(61, 46, 46, 0.7); */
   width: 100%;
   min-height: 500px;
 }
