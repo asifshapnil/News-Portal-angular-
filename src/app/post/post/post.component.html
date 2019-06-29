@@ -9,6 +9,8 @@
           </span>
           <span class="text-success pl-3">Total read {{ post.count }} times</span>
       </h6>
+      <h6><span class="text-info">{{ post.readingTime }}</span></h6>
+      
        <br>
       <img *ngIf="post.isMedia === 0" class="img-fluid" [src]="post.imagePath" alt="">
       <video *ngIf="post.isMedia === 1" class="img-fluid" controls (click)="toggleVideo()" #videoPlayer>
